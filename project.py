@@ -45,3 +45,15 @@ plt.legend(title='Year')
 plt.grid(True)
 plt.tight_layout()
 plt.show()
+
+# Objective 4: Analyze Food Grains Distribution by State
+state_distribution = df.groupby('State')['Distribution Of Food Grains (UOM:MT(Metrictonne))'].sum().sort_values(ascending=False)
+plt.figure(figsize=(12, 8))
+state_distribution.plot(kind='bar', color='teal')
+plt.title('Food Grains Distribution by State')
+plt.xlabel('State')
+plt.ylabel('Total Food Grains Distributed (MT)')
+plt.xticks(rotation=90)
+plt.tight_layout()
+plt.show()
+
