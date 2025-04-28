@@ -75,3 +75,12 @@ plt.ylabel('Total Food Grains Distributed (MT)')
 plt.grid(True)
 plt.tight_layout()
 plt.show()
+
+# Objective 7: EPOS vs Manual Food Grains Distribution
+epos_total = df['Epos (Electronic Point Of Sale System) Distribution Of Food Grains (UOM:MT(Metrictonne))'].sum()
+manual_total = df['Manual Distribution Of Food Grains (UOM:MT(Metrictonne))'].sum()
+plt.figure(figsize=(6, 6))
+plt.pie([epos_total, manual_total], labels=['EPOS', 'Manual'], autopct='%1.1f%%', colors=['#66b3ff', '#ff9999'], startangle=140)
+plt.title('EPOS vs Manual Food Grains Distribution')
+plt.tight_layout()
+plt.show()
