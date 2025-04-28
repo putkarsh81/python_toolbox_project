@@ -27,3 +27,21 @@ plt.xlabel('Total Food Grains Distributed (MT)')
 plt.ylabel('State')
 plt.tight_layout()
 plt.show()
+
+# Objective 3: Compare Aadhaar Authenticated Transactions with Total Transactions
+plt.figure(figsize=(8, 6))
+sns.scatterplot(
+    data=df,
+    x='Transaction For Ration Cards (UOM:Number)',
+    y='Aadhaar Authenticated Transactions (UOM:Number)',
+    hue='Year',
+    palette='coolwarm',
+    alpha=0.7
+)
+plt.title('Aadhaar Authenticated Transactions vs Total Transactions')
+plt.xlabel('Total Transactions for Ration Cards')
+plt.ylabel('Aadhaar Authenticated Transactions')
+plt.legend(title='Year')
+plt.grid(True)
+plt.tight_layout()
+plt.show()
